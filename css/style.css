@@ -994,20 +994,10 @@ a.card:focus-visible .card__media::after { opacity: 1; }
 .diptyque .p-about__body { grid-column: 8 / span 4; }
 .diptyque .indent { text-indent: 4.2em; }
 
-/* the artboard scrolls inside a browser-sized window (first screen of the design) instead of
-   stretching the page; the page carries on scrolling once the window reaches either end */
 .ws-holder {
   grid-column: 2 / span 10;
   margin-top: 11.5rem;
-  aspect-ratio: 1128 / 700;
-  overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(251, 251, 251, 0.35) transparent;
-  background: #f3f2ee;
 }
-.ws-holder:focus-visible { outline: 1px solid var(--fg); outline-offset: 4px; }
 
 /* Web Showing artboard — every value is cqw of its 1128px design width */
 .ws {

@@ -1,6 +1,6 @@
 # MIN K. 포트폴리오 웹사이트
 
-Figma 시안(`포폴_22561002_강민경`)의 세 프레임을 그대로 옮긴 반응형 웹사이트입니다.
+Figma 시안(`포폴_22561002_강민경`)의 프레임을 그대로 옮긴 반응형 웹사이트입니다.
 빌드 과정 없이 HTML·CSS·JS 파일만으로 동작하므로, 이 폴더를 그대로 올리면 바로 열립니다.
 
 ## 들어 있는 것
@@ -10,7 +10,10 @@ Figma 시안(`포폴_22561002_강민경`)의 세 프레임을 그대로 옮긴 �
 | `index.html` | 메인 (Main 프레임) |
 | `storytelling.html` | 10 STORYTELLING 상세 페이지 |
 | `diptyque.html` | DIPTYQUE : MEMORY 상세 페이지 (`신규 콘텐츠` 프레임) |
+| `uplus.html` | U+ ONE 상세 페이지 |
+| `nordly.html` | NORDLY 상세 페이지 |
 | `css/style.css` | 전체 스타일 |
+| `css/uplus.css`, `css/nordly.css` | U+ ONE, NORDLY 페이지 전용 스타일 |
 | `js/main.js` | 페이지 전환, 스크롤, 필터, 마우스 인터랙션 |
 | `assets/` | 이미지, 도형 SVG, 폰트 |
 

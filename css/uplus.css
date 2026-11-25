@@ -1,0 +1,69 @@
+/* =========================================================
+   U+ ONE — page-specific layer on top of style.css
+   (1rem = 10 design px at 1440, same as the shared sheet)
+   ========================================================= */
+
+/* ---------- hero ---------- */
+
+/* this frame sits 40px higher than the other detail pages, with a shorter 900 × 651 photo */
+.uplus .p-title { padding-top: 10.7rem; }
+.uplus .p-hero__img { margin-top: 2.65rem; aspect-ratio: 900 / 651; }
+.uplus .p-hero__big { top: 48.1rem; }
+
+/* phone mock-up sits on the photo: rendered box 891 / 383, 383.1 × 541.6 inside the image at 499 / 294
+   (pre-rotated asset, matched to the Figma render) */
+.up-hero-phone {
+  position: absolute;
+  left: 43.556%;
+  top: 13.671%;
+  width: 42.567%;
+  pointer-events: none;
+}
+.up-hero-phone img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(1.974rem 7.533rem 3.294rem rgba(0, 0, 0, 0.16));
+}
+
+/* ---------- meta + about ---------- */
+
+.uplus .p-meta { margin-top: 6.6rem; }
+.uplus .p-meta .info:nth-child(1) { grid-column: 5 / span 2; }
+.uplus .p-meta .info:nth-child(2) { grid-column: 7 / span 2; }
+.uplus .p-about { margin-top: 11.35rem; }
+.uplus .p-about__body { grid-column: 8 / span 4; }
+.uplus .indent { text-indent: 4.2em; }
+
+/* ---------- web showing artboard ---------- */
+
+.up-ws {
+  grid-column: 2 / span 10;
+  margin-top: 10.1rem;
+  background: #1a1a1a;
+}
+.up-ws > img {
+  width: 100%;
+  height: auto;
+}
+/* slices are cut with 3 image px of overlap (3 / 2232 of the width) */
+.up-ws > img + img { margin-top: -0.1344%; }
+
+/* ---------- next project ---------- */
+
+.uplus .next { margin-top: 46.1rem; padding-bottom: 79.4rem; }
+
+/* ---------- mobile ---------- */
+
+@media (max-width: 767px) {
+  .uplus .p-title { padding-top: 11rem; }
+  .uplus .p-hero__img { margin-top: 2.4rem; }
+  .uplus .p-meta { margin-top: 5rem; }
+  .uplus .p-meta .info:nth-child(1) { grid-column: 1; }
+  .uplus .p-meta .info:nth-child(2) { grid-column: 2; }
+  .uplus .p-about { margin-top: 6rem; row-gap: 2.4rem; }
+  .uplus .p-about__body { grid-column: 1 / -1; }
+  .uplus .p-hero__big { font-size: 5.2rem; }
+  .up-hero-phone img { filter: drop-shadow(1rem 3.6rem 1.6rem rgba(0, 0, 0, 0.16)); }
+  .up-ws { grid-column: 1 / -1; margin-top: 6rem; }
+  .uplus .next { margin-top: 14rem; padding-bottom: 14rem; }
+}

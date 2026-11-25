@@ -1,0 +1,53 @@
+/* =========================================================
+   NORDLY — page-specific layout (loaded after style.css)
+   1rem = 10 design px at 1440, same as the shared sheet
+   ========================================================= */
+
+/* top block follows the shared p-hero / p-meta / p-about pattern */
+.nordly .p-hero__big { top: 53.3rem; }
+.nordly .p-meta .info:nth-child(1) { grid-column: 5 / span 2; }
+.nordly .p-meta .info:nth-child(2) { grid-column: 7 / span 2; }
+.nordly .p-about { margin-top: 11.5rem; }
+.nordly .p-about__body { grid-column: 8 / span 4; }
+.nordly .indent { text-indent: 4.2em; }
+
+/* web design showcase: the 1128px site mock-up, then four 1128×634.5 screens */
+.nd-show { row-gap: 10.15rem; }
+.nd-show > * { grid-column: 2 / span 10; }
+
+/* the tall mock-up is exported as four stacked JPEG slices; they meet without seams */
+.nd-web {
+  margin-top: 7.6rem; /* 101px under the about copy in Figma; keep-all wrapping here adds one line (≈25px) */
+  margin-bottom: 1.45rem; /* 116px to the first screen in Figma (row-gap covers the other 101.5) */
+  background: #000;
+}
+.nd-web img {
+  width: 100%;
+  height: auto;
+}
+.nd-screen { aspect-ratio: 1128 / 634.5; }
+
+.nordly .next { margin-top: 41.3rem; padding-bottom: 43.4rem; }
+
+/* rise in like the shared .media blocks (the slices are not zoomed, so their seams stay aligned) */
+@supports (animation-timeline: view()) {
+  .nd-web {
+    animation: rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 20%;
+  }
+}
+
+@media (max-width: 767px) {
+  .nordly .p-hero__big { font-size: 4.6rem; }
+  .nordly .p-meta .info:nth-child(1) { grid-column: 1; }
+  .nordly .p-meta .info:nth-child(2) { grid-column: 2; }
+  .nordly .p-about { margin-top: 6rem; row-gap: 2.4rem; }
+  .nordly .p-about__body { grid-column: 1 / -1; }
+
+  .nd-show { row-gap: 1.2rem; }
+  .nd-show > * { grid-column: 1 / -1; }
+  .nd-web { margin-top: 6rem; margin-bottom: 0; }
+
+  .nordly .next { margin-top: 14rem; padding-bottom: 14rem; }
+}

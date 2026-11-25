@@ -632,9 +632,11 @@ a.card:focus-visible .card__media::after { opacity: 1; }
 
 /* U+ ONE card */
 .card--uplus .card__media > img.cover { object-position: 50% 65.5%; }
+/* tint sits above the photo (which gets its own layer from the zoom/settle transforms) */
 .card--uplus .card__media::before {
   content: "";
   position: absolute;
+  z-index: 1;
   inset: 0;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -642,7 +644,7 @@ a.card:focus-visible .card__media::after { opacity: 1; }
 }
 .uplus__title {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   left: 50%;
   top: 8.16cqw;
   transform: translateX(-50%);
@@ -655,7 +657,7 @@ a.card:focus-visible .card__media::after { opacity: 1; }
 }
 .uplus__icon {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   left: 77.78cqw;
   top: 70.52cqw;
   width: 16.33cqw;

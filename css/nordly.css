@@ -4,11 +4,7 @@
    ========================================================= */
 
 /* top block follows the shared p-hero / p-meta / p-about pattern */
-/* frame sits 40px higher than the older detail pages, with a shorter 900 × 651 photo (same as U+ ONE) */
-.nordly .p-title { padding-top: 10.7rem; }
-.nordly .p-hero__img { margin-top: 2.65rem; aspect-ratio: 900 / 651; }
 .nordly .p-hero__big { top: 48.1rem; }
-.nordly .p-meta { margin-top: 6.6rem; }
 .nordly .p-meta .info:nth-child(1) { grid-column: 5 / span 2; }
 .nordly .p-meta .info:nth-child(2) { grid-column: 7 / span 2; }
 .nordly .p-about { margin-top: 11.5rem; }

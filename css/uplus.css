@@ -5,9 +5,6 @@
 
 /* ---------- hero ---------- */
 
-/* this frame sits 40px higher than the other detail pages, with a shorter 900 × 651 photo */
-.uplus .p-title { padding-top: 10.7rem; }
-.uplus .p-hero__img { margin-top: 2.65rem; aspect-ratio: 900 / 651; }
 .uplus .p-hero__big { top: 48.1rem; }
 
 /* phone mock-up sits on the photo: rendered box 891 / 383, 383.1 × 541.6 inside the image at 499 / 294
@@ -27,7 +24,6 @@
 
 /* ---------- meta + about ---------- */
 
-.uplus .p-meta { margin-top: 6.6rem; }
 .uplus .p-meta .info:nth-child(1) { grid-column: 5 / span 2; }
 .uplus .p-meta .info:nth-child(2) { grid-column: 7 / span 2; }
 .uplus .p-about { margin-top: 11.35rem; }

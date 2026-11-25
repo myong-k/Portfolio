@@ -289,6 +289,17 @@ ul, ol { list-style: none; }
 }
 .hero__title > span { display: block; }
 .hero__title > span:last-child { margin-top: -0.4rem; padding-left: 18.07rem; }
+.hero__sub {
+  grid-column: 5 / -1;
+  margin-top: 0.7rem;
+  margin-right: 22.9rem;
+  font-weight: 300;
+  font-size: max(12px, 1.8rem);
+  line-height: 1.8;
+  letter-spacing: -0.02em;
+  text-align: right;
+  white-space: nowrap;
+}
 
 .s-hero-tl { --x: 9.661; --y: 15.2; --w: 40.1565; --h: 36.4284; --iw: 32.8077; --ih: 26.1247; --r: 21.77deg; --iW: 102.38%; --iH: 103.66%; }
 .s-hero-tr { --x: 107.1; --y: -2.7; --w: 34.84; --h: 34.3287; --iw: 28.8954; --ih: 28.1944; --r: 13.95deg; }
@@ -1359,6 +1370,7 @@ a.card:hover .card__view { opacity: 1; scale: 1; }
   .hero__inner { padding-top: 0; position: absolute; left: 0; right: 0; top: 40%; transform: translateY(-50%); }
   .hero__title { font-size: 4.8rem; line-height: 4.7rem; }
   .hero__title > span:last-child { margin-top: 0; padding-left: 7.2rem; }
+  .hero__sub { grid-column: 1 / -1; margin-top: 1.6rem; margin-right: 0; font-size: 1.3rem; line-height: 1.6; white-space: normal; word-break: keep-all; text-wrap: balance; }
   .s-hero-tl { --x: -4; --y: 9; --s: 0.5; }
   .s-hero-tr { --x: 22; --y: -2; --s: 0.55; }
   .s-hero-l  { --x: -6; --y: 46; --s: 0.55; }

@@ -389,6 +389,27 @@
 
   // DIPTYQUE web showing: the sentence slowly orbits the oval photo
   const orbit = document.querySelector(".ws-orbit");
+  // The sentence must fit inside one lap of the doubled path, or its end runs onto its start.
+  // textLength did that in Chrome but Safari ignores it on textPath, so tighten the letter-spacing instead.
+  function fitOrbit() {
+    const text = orbit.parentNode;
+    const lap = document.getElementById("ws-oval").getTotalLength() / 2;
+    const target = lap * 0.965;
+    const glyphs = orbit.textContent.length - 1;
+    const spacing = parseFloat(text.getAttribute("letter-spacing")) || 0;
+    const natural = text.getComputedTextLength() - spacing * glyphs;
+    text.setAttribute("letter-spacing", ((target - natural) / glyphs).toFixed(3));
+    // fallback for engines that ignore letter-spacing on SVG text
+    const length = text.getComputedTextLength();
+    if (length > lap - 8) {
+      const size = parseFloat(text.getAttribute("font-size"));
+      text.setAttribute("font-size", (size * target / length).toFixed(3));
+    }
+  }
+  if (orbit) {
+    fitOrbit();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitOrbit);
+  }
   if (orbit && !reduceMotion) {
     const path = document.getElementById("ws-oval");
     const lap = path.getTotalLength() / 2;

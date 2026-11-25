@@ -394,14 +394,15 @@
   function fitOrbit() {
     const text = orbit.parentNode;
     const lap = document.getElementById("ws-oval").getTotalLength() / 2;
-    const target = lap * 0.965;
+    // leave about one word space between "remember." and "A scent"
+    const target = lap - 12;
     const glyphs = orbit.textContent.length - 1;
     const spacing = parseFloat(text.getAttribute("letter-spacing")) || 0;
     const natural = text.getComputedTextLength() - spacing * glyphs;
     text.setAttribute("letter-spacing", ((target - natural) / glyphs).toFixed(3));
     // fallback for engines that ignore letter-spacing on SVG text
     const length = text.getComputedTextLength();
-    if (length > lap - 8) {
+    if (length > lap - 4) {
       const size = parseFloat(text.getAttribute("font-size"));
       text.setAttribute("font-size", (size * target / length).toFixed(3));
     }

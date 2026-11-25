@@ -4,7 +4,11 @@
    ========================================================= */
 
 /* top block follows the shared p-hero / p-meta / p-about pattern */
-.nordly .p-hero__big { top: 53.3rem; }
+/* frame sits 40px higher than the older detail pages, with a shorter 900 × 651 photo (same as U+ ONE) */
+.nordly .p-title { padding-top: 10.7rem; }
+.nordly .p-hero__img { margin-top: 2.65rem; aspect-ratio: 900 / 651; }
+.nordly .p-hero__big { top: 48.1rem; }
+.nordly .p-meta { margin-top: 6.6rem; }
 .nordly .p-meta .info:nth-child(1) { grid-column: 5 / span 2; }
 .nordly .p-meta .info:nth-child(2) { grid-column: 7 / span 2; }
 .nordly .p-about { margin-top: 11.5rem; }
@@ -18,7 +22,7 @@
 /* the tall mock-up is exported as four stacked JPEG slices; they meet without seams */
 .nd-web {
   margin-top: 7.6rem; /* 101px under the about copy in Figma; keep-all wrapping here adds one line (≈25px) */
-  margin-bottom: 1.45rem; /* 116px to the first screen in Figma (row-gap covers the other 101.5) */
+  margin-bottom: -4.45rem; /* 57px to the first screen in Figma (row-gap is 101.5) */
   background: #000;
 }
 .nd-web img {
@@ -39,6 +43,9 @@
 }
 
 @media (max-width: 767px) {
+  .nordly .p-title { padding-top: 11rem; }
+  .nordly .p-hero__img { margin-top: 2.4rem; }
+  .nordly .p-meta { margin-top: 5rem; }
   .nordly .p-hero__big { font-size: 4.6rem; }
   .nordly .p-meta .info:nth-child(1) { grid-column: 1; }
   .nordly .p-meta .info:nth-child(2) { grid-column: 2; }

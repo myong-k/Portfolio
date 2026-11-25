@@ -38,7 +38,7 @@
 
 .up-ws {
   grid-column: 2 / span 10;
-  margin-top: 10.1rem;
+  margin-top: 7.8rem; /* about copy wraps one line longer than Figma (keep-all) */
   background: #1a1a1a;
 }
 .up-ws > img {
